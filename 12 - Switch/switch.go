@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // Função que recebe um número inteiro e imprime o dia da semana correspondente
 func imprimirDiaDaSemana(dia int) {
@@ -13,6 +11,8 @@ func imprimirDiaDaSemana(dia int) {
 		fmt.Println("Segunda-feira")
 	case 3:
 		fmt.Println("Terça-feira")
+		// O fallthrough permite que a execução continue para o próximo caso
+		fallthrough
 	case 4:
 		fmt.Println("Quarta-feira")
 	case 5:
@@ -30,7 +30,7 @@ func main() {
 	// Chamando a função com o valor 3 (Terça-feira)
 	imprimirDiaDaSemana(3)
 
-	// Você pode chamar a função com diferentes valores
+	// Chamando com outros valores
 	imprimirDiaDaSemana(1) // Domingo
-	imprimirDiaDaSemana(5) // Quinta-feira
+	imprimirDiaDaSemana(7) // Sábado
 }
