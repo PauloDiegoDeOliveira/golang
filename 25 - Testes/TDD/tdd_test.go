@@ -17,7 +17,7 @@ func TestSoma(t *testing.T) {
 	// Itera sobre os casos de teste
 	for _, c := range cases {
 		t.Run(c.name, func(t *testing.T) {
-			// Executa a função Soma (que ainda não existe)
+			// Executa a função Soma
 			resultado := Soma(c.numeros)
 
 			// Verifica se o resultado é o esperado
