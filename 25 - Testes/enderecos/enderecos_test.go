@@ -6,6 +6,8 @@ import (
 
 // Função de teste para TipoEndereco usando subtestes para cada cenário
 func TestTipoEndereco(t *testing.T) {
+	t.Parallel() // Indica que os subtestes podem ser executados em paralelo
+
 	// Casos de teste que queremos validar
 	cases := []struct {
 		name     string // Nome do cenário de teste
